@@ -44,7 +44,8 @@
     <dependency>
       <groupId>com.google.javascript</groupId>
       <artifactId>closure-compiler</artifactId>
-      <version>r1918</version>
+      <version>rr2079.1</version>
+      <optional>true</optional>
     </dependency>
   </dependencies>
   <build>
@@ -65,19 +66,19 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Export-Package>com.google.javascript.*</Export-Package>
+            <_exportcontents>com.google.javascript.jscomp</_exportcontents>
             <Import-Package>
-                javax.mail.*;resolution:=optional,
-                sun.*;resolution:=optional,
-                com.sun.tools.*;resolution:=optional,
-                gnu.gcj.*;resolution:=optional,
-                kaffe.*;resolution:=optional,
-                weblogic.*;resolution:=optional,
-                org.apache.env.*;resolution:=optional,
-                org.apache.harmony.*;resolution:=optional,
-                *
+              sun.*;resolution:=optional,
+              com.sun.tools.*;resolution:=optional,
+              kaffe.*;resolution:=optional,
+              gnu.*;resolution:=optional,
+              org.apache.env.*;resolution:=optional,
+              org.apache.harmony.*;resolution:=optional,
+              weblogic.*;resolution:=optional,
+              javax.mail.*;resolution:=optional,
+              *
             </Import-Package>
-            <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+            <Embed-Dependency>*;scope=compile|runtime;type=!pom;inline=true</Embed-Dependency>
             <Embed-Transitive>true</Embed-Transitive>
           </instructions>
         </configuration>
