@@ -8,7 +8,7 @@
   </parent>
   <groupId>de.matrixweb.osgi.wrapped</groupId>
   <artifactId>osgi-wrapped-closure-compiler</artifactId>
-  <version>r2079</version>
+  <version>0.0.0.r2080-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <name>OSGi Bundle Closure-Compiler</name>
