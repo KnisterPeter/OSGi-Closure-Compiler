@@ -8,7 +8,7 @@
   </parent>
   <groupId>de.matrixweb.osgi.wrapped</groupId>
   <artifactId>osgi-wrapped-closure-compiler</artifactId>
-  <version>v20130227-SNAPSHOT</version>
+  <version>1.0.v20130411-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <name>OSGi Bundle Closure-Compiler</name>
@@ -44,7 +44,7 @@
     <dependency>
       <groupId>com.google.javascript</groupId>
       <artifactId>closure-compiler</artifactId>
-      <version>v20130227</version>
+      <version>v20130411</version>
       <optional>true</optional>
     </dependency>
   </dependencies>
@@ -69,13 +69,8 @@
             <_exportcontents>com.google.javascript.jscomp</_exportcontents>
             <Import-Package>
               sun.*;resolution:=optional,
-              com.sun.tools.*;resolution:=optional,
-              kaffe.*;resolution:=optional,
-              gnu.*;resolution:=optional,
-              org.apache.env.*;resolution:=optional,
-              org.apache.harmony.*;resolution:=optional,
-              weblogic.*;resolution:=optional,
-              javax.mail.*;resolution:=optional,
+              javax.inject.*;resolution:=optional,
+              org.apache.tools.ant.*;resolution:=optional,
               *
             </Import-Package>
             <Embed-Dependency>*;scope=compile|runtime;type=!pom;inline=true</Embed-Dependency>
