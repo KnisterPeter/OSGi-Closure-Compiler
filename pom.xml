@@ -8,7 +8,7 @@
   </parent>
   <groupId>de.matrixweb.osgi.wrapped</groupId>
   <artifactId>osgi-wrapped-closure-compiler</artifactId>
-  <version>1.1.v20130411-SNAPSHOT</version>
+  <version>1.0.v20130722-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <name>OSGi Bundle Closure-Compiler</name>
@@ -44,7 +44,7 @@
     <dependency>
       <groupId>com.google.javascript</groupId>
       <artifactId>closure-compiler</artifactId>
-      <version>v20130411</version>
+      <version>v20130722</version>
       <optional>true</optional>
     </dependency>
   </dependencies>
