@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -8,7 +9,7 @@
   </parent>
   <groupId>de.matrixweb.osgi.wrapped</groupId>
   <artifactId>osgi-wrapped-closure-compiler</artifactId>
-  <version>1.1.v20130722-SNAPSHOT</version>
+  <version>1.2.v20131014-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <name>OSGi Bundle Closure-Compiler</name>
@@ -44,7 +45,7 @@
     <dependency>
       <groupId>com.google.javascript</groupId>
       <artifactId>closure-compiler</artifactId>
-      <version>v20130722</version>
+      <version>v20131014</version>
       <optional>true</optional>
     </dependency>
   </dependencies>
@@ -77,6 +78,26 @@
             <Embed-Transitive>true</Embed-Transitive>
           </instructions>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>de.matrixweb.maven.plugins.relocator</groupId>
+        <artifactId>relocator-maven-plugin</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <configuration>
+          <relocations>
+            <relocation>
+              <pattern>org.kohsuke.args4j</pattern>
+              <shadedPattern>internal.org.kohsuke.args4j</shadedPattern>
+            </relocation>
+          </relocations>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>relocate</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
     <pluginManagement>
